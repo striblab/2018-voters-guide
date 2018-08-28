@@ -1,9 +1,103 @@
-
 <div class="strib-styles ssa ssb ssc">
-  <section class="container-lg">
-    <p>Content goes here.</p>
-  </section>
+	<section class="container-lg">
+		<div class="header">
+      <h5 class="font-popular-light">Candidates</h5>
+			<h1>2018 Minnesota Voter's Guide</h1>
+      <p class="byline">By Star Tribune Staff</p>
+
+      <nav>
+        some kind of nav filtery thingy goes here.
+      </nav>
+
+			<p class="leadin">Since early in this campaign season, the Star Tribune has reported on candidates
+				statewide ahead of the Nov. 6 general election. You can find information on other
+				contests — including legislative races, county, city and school board races — at startribune.com/election. Ebitas
+				aut ut omnimpo riamus num harchic te pa il is volupti officab oratur? Caborem cupturit lab isi optaqui rae veriore, velenda
+				cum in nimped milluta tibuscias ad quam sit faccust estrum quas esciis asi.</p>
+		</div>
+
+		{#each Object.entries(offices) as [officeName, office]} {#if office.bodyName}<h2 class="bodyName">{office.bodyName}</h2>{/if}
+		<div class="office office-{officeName}">
+			<h3>{officeName}</h3>
+			{#if office.distMap}<img src="{office.distMap}" alt="Minimap of this congressional district" />{/if} {#if office.distAreas}<p
+			 class="distAreas">{office.distAreas}</p>{/if}
+			<div class="bios">
+				<h5>Bio</h5>
+
+				{#each office.bios as bio}
+				<div class="candidate">{bio.name}</div>
+				{/each}
+			</div>
+
+			<div class="issues">
+				{#each Object.entries(office.issues) as [issueName, responses]}
+				<div class="issue">
+					<h5>{ issueName }</h5>
+
+					{#each responses as response}
+					<div class="response">
+						{response.name}: { response.text }
+					</div>
+					{/each}
+				</div>
+				{/each}
+			</div>
+		</div>
+		{/each}
+
+    <div class="credits">
+      <p>Credits</p>
+      <p>Contributors: Names here and herey and herey</p>
+      <p>Design: C.J. Sinner</p>
+      <p>Photography: Glen Stubbe and Anthony Souffle</p>
+      <p>Illustration: Name hereyey</p>
+    </div>
+	</section>
 </div>
 
+<script>
+  import { groupBy, mapValues, each, pick } from "lodash";
 
+  export default {
+    computed: {
+      offices: ({ candidates }) => {
+        let offices = groupBy(candidates, "office");
 
+        offices = mapValues(offices, office => {
+          let issues = {};
+
+          each(office, candidate => {
+            each(candidate, (field, fieldName) => {
+              let fieldMatch = fieldName.match(/issue([0-9]+).*label/i);
+
+              if (fieldMatch && field) {
+                issues[field.trim()] = issues[field.trim()] || [];
+                let issue = pick(candidate, [
+                  "office",
+                  "party",
+                  "name",
+                  "incumbent",
+                  "photofull",
+                  "photocrop"
+                ]);
+                issue.text = candidate[`issue${fieldMatch[1]}`];
+                issues[field.trim()].push(issue);
+              }
+            });
+          });
+
+          let o = pick(office[0], ["bodyName", "distMap", "distAreas"]);
+
+          o.bios = office;
+          o.issues = issues;
+
+          return o;
+        });
+
+        console.log(offices);
+
+        return offices;
+      }
+    }
+  };
+</script>

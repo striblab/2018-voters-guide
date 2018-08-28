@@ -1,3 +1,35 @@
 /**
  * Project specific styling.
  */
+
+//HEADER styles
+.header {
+  text-align: center;
+  max-width: 900px;
+}
+
+.header h1 {
+  padding-top: 0.3em;
+  line-height: 1.1em;
+}
+
+.header h5 {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.08em;
+  padding-top: 40px;
+}
+
+.header .leadin {
+  max-width: 525px;
+  text-align: left;
+  margin: auto;
+  font-family: "Benton Sans";
+  font-size: 0.9em;
+  padding-top: 30px;
+  margin-bottom: 45px;
+}
+
+//NAV styles
+
+//MAIN ISSUE styles

@@ -5,7 +5,12 @@
 
   "data": {
     "content": "./content.json",
-    "pkg": "./package.json"
+    "pkg": "./package.json",
+    "candidates": {
+      "source": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRixT-Ws33DhB5ukck_cWMF8x3hym-5qRR60Ti9I-SGiDqe0cfgu_loVRmqdE8vJO8QqDHUaIfdo9tn/pub?output=csv",
+      "local": "candidates.json",
+      "localOutput": "assets/data"
+    }
   },
 
   "cms": {
@@ -17,10 +22,8 @@
     }
   },
 
-
   "styles": {
-    "globals": [
-    ]
+    "globals": []
   },
   "js": {
     "globals": [
