@@ -1,10 +1,14 @@
 {
   "name": "2018-voters-guide",
   "version": "0.0.1",
-  "description": "Candidate issues for the 2018 midterm election in Minnesota",
+  "description": "Voter guide for 2018 midterm elex",
   "author": {
     "name": "Star Tribune visuals and design teams",
     "email": "datadrop@startribune.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/striblab/2018-voters-guide.git"
   },
   "main": "app/index.js",
   "scripts": {

@@ -29,7 +29,7 @@
       "https://static.startribune.com/assets/libs/lodash/4.17.4/lodash.min.js"
     ]
   },
-  "publishToken": "3e92915930a1e8ef1d33b1d0b6558f30",
+  "publishToken": "3685d8e93070a5fd4088ba1f01a2dc49",
   "publish": {
     "default": {
       "bucket": "static.startribune.com",
