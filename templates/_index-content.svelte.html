@@ -17,8 +17,8 @@
 		</div>
 
     {#if office.bodyName}<h2 class="bodyName">{office.bodyName}</h2>{/if}
-		{#each Object.entries(offices) as [officeName, office]}
-		<div class="office office-{officeName}">
+		{#each Object.entries(offices) as [officeClass, officeName, office]}
+		<div class="office office-{officeClass}">
 			<h3>{officeName}</h3>
       <div class="location">
         {#if office.distMap}<img src="{office.distMap}" alt="Minimap of this congressional district" />{/if}
@@ -27,8 +27,9 @@
 
 			<div class="bios">
 				{#each office.bios as bio}
-				<div class="candidate">{bio.name}<span class="inc">{#if bio.incumbent == "y"}(i){/if}</span></div>
-        <div class="party">{bio.party}</div>
+				<h5 class="candidate">{bio.first} {bio.last}<span class="inc">{#if bio.incumbent == "y"}(i){/if}</span></h5>
+        <p class="party">{bio.party}</p>
+        <p class="candBio">{bio.bio}</p>
 				{/each}
 			</div>
 
@@ -39,7 +40,7 @@
 
 					{#each responses as response}
 					<div class="response">
-						{response.name}: { response.text }
+						{response.last}: { response.text }
 					</div>
 					{/each}
 				</div>
@@ -78,10 +79,12 @@
                 let issue = pick(candidate, [
                   "office",
                   "party",
-                  "name",
+                  "first",
+                  "last",
                   "incumbent",
                   "photofull",
-                  "photocrop"
+                  "photocrop",
+                  "bio"
                 ]);
                 issue.text = candidate[`issue${fieldMatch[1]}`];
                 issues[field.trim()].push(issue);
