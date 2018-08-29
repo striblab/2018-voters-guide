@@ -16,20 +16,24 @@
 				cum in nimped milluta tibuscias ad quam sit faccust estrum quas esciis asi.</p>
 		</div>
 
+
+		{#each Object.entries(offices) as [officeName, office]}
     {#if office.bodyName}<h2 class="bodyName">{office.bodyName}</h2>{/if}
-		{#each Object.entries(offices) as [officeClass, officeName, office]}
-		<div class="office office-{officeClass}">
+		<div class="office office-{office.officeClass}">
 			<h3>{officeName}</h3>
       <div class="location">
         {#if office.distMap}<img src="{office.distMap}" alt="Minimap of this congressional district" />{/if}
-        {#if office.distAreas}<p class="distAreas">{office.distAreas}</p>{/if}
+        {#if office.distAreas}<p class="distAreas">KEY AREAS:{office.distAreas}</p>{/if}
       </div>
 
 			<div class="bios">
+        <h5>Bio</h5>
 				{#each office.bios as bio}
-				<h5 class="candidate">{bio.first} {bio.last}<span class="inc">{#if bio.incumbent == "y"}(i){/if}</span></h5>
-        <p class="party">{bio.party}</p>
-        <p class="candBio">{bio.bio}</p>
+        <div class="candidate">
+          <h4 class="candName">{bio.first} {bio.last}<span class="inc">{#if bio.incumbent == "y"}(i){/if}</span></h4>
+          <p class="party">{bio.party}</p>
+          <p class="candBio">{bio.bio}</p>
+        </div>
 				{/each}
 			</div>
 
@@ -39,7 +43,7 @@
 					<h5>{ issueName }</h5>
 
 					{#each responses as response}
-					<div class="response">
+					<div class="response {response.last}">
 						<span>{response.last}: </span>{ response.text }
 					</div>
 					{/each}
@@ -92,15 +96,18 @@
             });
           });
 
-          let o = pick(office[0], ["bodyName", "distMap", "distAreas"]);
+          let o = pick(office[0], [
+            "bodyName",
+            "officeClass",
+            "distMap",
+            "distAreas"
+          ]);
 
           o.bios = office;
           o.issues = issues;
 
           return o;
         });
-
-        console.log(offices);
 
         return offices;
       }

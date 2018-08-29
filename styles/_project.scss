@@ -42,12 +42,65 @@ h3 {
   text-align: center;
 }
 
+.location {
+  width: 30%;
+  margin: auto;
+
+  .distAreas {
+    font-family: "Benton Sans";
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
+
+.bios {
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  h5 {
+    order: 1;
+    text-transform: uppercase;
+  }
+
+  .candidate {
+    width: 40%;
+    text-transform: none;
+
+    .candName,
+    .party {
+      text-align: center;
+    }
+
+    span.inc {
+      font-size: 0.75em;
+      font-weight: normal;
+      margin-left: 4px;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .candidate:first-child {
+    order: 0;
+
+    .candBio {
+      text-align: right;
+    }
+  }
+
+  .candidate:last-child {
+    order: 2;
+  }
+}
+
 .issues {
   font-size: 0.9em;
 
   .issue {
-    padding-top: 1em;
-    margin-bottom: 1em;
+    padding: 1em 0em;
     border-bottom: 1px solid #eeeeee;
     display: flex;
     flex-direction: row;
@@ -56,15 +109,28 @@ h3 {
   }
 
   .issue h5 {
+    order: 1;
+    text-transform: uppercase;
+  }
+
+  .issue .response {
+    width: 40%;
+  }
+
+  .issue .response:first-child {
     order: 0;
+    text-align: right;
+  }
+
+  .issue .response:last-child {
+    order: 2;
   }
 
   .issue .response span {
     display: none;
-
-    @media screen (max-width: 768px) {
-      display: inline;
-      font-weight: bold;
-    }
+    // @media screen {
+    //   display: inline;
+    //   font-weight: bold;
+    // }
   }
 }
