@@ -16,16 +16,19 @@
 				cum in nimped milluta tibuscias ad quam sit faccust estrum quas esciis asi.</p>
 		</div>
 
-		{#each Object.entries(offices) as [officeName, office]} {#if office.bodyName}<h2 class="bodyName">{office.bodyName}</h2>{/if}
+    {#if office.bodyName}<h2 class="bodyName">{office.bodyName}</h2>{/if}
+		{#each Object.entries(offices) as [officeName, office]}
 		<div class="office office-{officeName}">
 			<h3>{officeName}</h3>
-			{#if office.distMap}<img src="{office.distMap}" alt="Minimap of this congressional district" />{/if} {#if office.distAreas}<p
-			 class="distAreas">{office.distAreas}</p>{/if}
-			<div class="bios">
-				<h5>Bio</h5>
+      <div class="location">
+        {#if office.distMap}<img src="{office.distMap}" alt="Minimap of this congressional district" />{/if}
+        {#if office.distAreas}<p class="distAreas">{office.distAreas}</p>{/if}
+      </div>
 
+			<div class="bios">
 				{#each office.bios as bio}
-				<div class="candidate">{bio.name}</div>
+				<div class="candidate">{bio.name}<span class="inc">{#if bio.incumbent == "y"}(i){/if}</span></div>
+        <div class="party">{bio.party}</div>
 				{/each}
 			</div>
 
