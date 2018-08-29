@@ -41,3 +41,30 @@ h2,
 h3 {
   text-align: center;
 }
+
+.issues {
+  font-size: 0.9em;
+
+  .issue {
+    padding-top: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .issue h5 {
+    order: 0;
+  }
+
+  .issue .response span {
+    display: none;
+
+    @media screen (max-width: 768px) {
+      display: inline;
+      font-weight: bold;
+    }
+  }
+}
