@@ -5,132 +5,134 @@
 //WIDTHS
 section.container-lg {
   max-width: 900px;
-}
 
-//HEADER styles
-.header {
-  text-align: center;
-}
-
-.header h1 {
-  padding-top: 0.3em;
-  line-height: 1.1em;
-}
-
-.header h5 {
-  text-transform: uppercase;
-  font-size: 0.9em;
-  letter-spacing: 0.08em;
-  padding-top: 40px;
-}
-
-.header .leadin {
-  max-width: 525px;
-  text-align: left;
-  margin: auto;
-  font-family: "Benton Sans";
-  font-size: 0.9em;
-  padding-top: 30px;
-  margin-bottom: 45px;
-}
-
-//NAV styles
-
-//MAIN ISSUE styles
-h2,
-h3 {
-  text-align: center;
-}
-
-.location {
-  width: 30%;
-  margin: auto;
-
-  .distAreas {
-    font-family: "Benton Sans";
-    font-size: 0.8em;
+  //HEADER styles
+  .header {
     text-align: center;
   }
-}
 
-.bios {
-  font-size: 0.9em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  h5 {
-    order: 1;
-    text-transform: uppercase;
+  .header h1 {
+    padding-top: 0.3em;
+    line-height: 1.1em;
   }
 
-  .candidate {
-    width: 40%;
-    text-transform: none;
+  .header h5 {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.08em;
+    padding-top: 40px;
+  }
 
-    .candName,
-    .party {
+  .header .leadin {
+    max-width: 525px;
+    text-align: left;
+    margin: auto;
+    font-family: "Benton Sans";
+    font-size: 0.9em;
+    padding-top: 30px;
+    margin-bottom: 45px;
+  }
+
+  //NAV styles
+
+  //MAIN ISSUE styles
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  .location {
+    width: 30%;
+    margin: auto;
+
+    .distAreas {
+      font-family: "Benton Sans";
+      font-size: 0.8em;
       text-align: center;
     }
-
-    span.inc {
-      font-size: 0.75em;
-      font-weight: normal;
-      margin-left: 4px;
-      position: relative;
-      top: -2px;
-    }
   }
 
-  .candidate:first-child {
-    order: 0;
-
-    .candBio {
-      text-align: right;
-    }
-  }
-
-  .candidate:last-child {
-    order: 2;
-  }
-}
-
-.issues {
-  font-size: 0.9em;
-
-  .issue {
-    padding: 1em 0em;
-    border-bottom: 1px solid #eeeeee;
+  .bios {
+    font-family: "Benton Sans";
+    font-size: 0.9em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    h5 {
+      order: 1;
+      text-transform: uppercase;
+    }
+
+    .candidate {
+      width: 40%;
+      text-transform: none;
+      text-align: justify;
+      text-justify: inter-word;
+
+      .candName,
+      .party {
+        text-align: center;
+      }
+
+      .party,
+      .candBio {
+        font-family: "Benton Sans";
+      }
+
+      span.inc {
+        font-size: 0.75em;
+        font-weight: normal;
+        margin-left: 4px;
+        position: relative;
+        top: -2px;
+      }
+    }
+
+    .candidate:first-child {
+      order: 0;
+    }
+
+    .candidate:last-child {
+      order: 2;
+    }
   }
 
-  .issue h5 {
-    order: 1;
-    text-transform: uppercase;
-  }
+  .issues {
+    font-size: 0.9em;
 
-  .issue .response {
-    width: 40%;
-  }
+    .issue {
+      padding: 1em 0em;
+      border-bottom: 1px solid #eeeeee;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: justify;
+      text-justify: inter-word;
+    }
 
-  .issue .response:first-child {
-    order: 0;
-    text-align: right;
-  }
+    .issue h5 {
+      order: 1;
+      text-transform: uppercase;
+    }
 
-  .issue .response:last-child {
-    order: 2;
-  }
+    .issue .response {
+      width: 40%;
+      font-family: "Benton Sans";
+    }
 
-  .issue .response span {
-    display: none;
-    // @media screen {
-    //   display: inline;
-    //   font-weight: bold;
-    // }
+    .issue .response:first-child {
+      order: 0;
+    }
+
+    .issue .response:last-child {
+      order: 2;
+    }
+
+    .issue .response span {
+      font-weight: bold;
+    }
   }
 }

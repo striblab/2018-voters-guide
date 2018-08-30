@@ -23,7 +23,7 @@
 			<h3>{officeName}</h3>
       <div class="location">
         {#if office.distMap}<img src="{office.distMap}" alt="Minimap of this congressional district" />{/if}
-        {#if office.distAreas}<p class="distAreas">KEY AREAS:{office.distAreas}</p>{/if}
+        {#if office.distAreas}<p class="distAreas">KEY AREAS: {office.distAreas}</p>{/if}
       </div>
 
 			<div class="bios">
@@ -43,9 +43,9 @@
 					<h5>{ issueName }</h5>
 
 					{#each responses as response}
-					<div class="response {response.last}">
+					<p class="response {response.last}">
 						<span>{response.last}: </span>{ response.text }
-					</div>
+					</p>
 					{/each}
 				</div>
 				{/each}
