@@ -54,12 +54,12 @@ section.container-lg {
   }
 
   .location {
-    width: 30%;
+    width: 25%;
     margin: auto;
 
     img {
-      width: 80%;
-      float: right;
+      width: 50%;
+      margin-left: 25%;
     }
 
     .distAreas {
@@ -92,20 +92,21 @@ section.container-lg {
 
       .candName {
         font-size: 1.1em;
-      }
-
-      .candName,
-      .party {
         text-align: center;
+        margin-bottom: 0;
       }
 
-      .party,
+      .party {
+        font-size: 0.8em;
+        font-family: "Benton Sans";
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+      }
+
       .candBio {
         font-size: 0.9em;
         font-family: "Benton Sans";
-      }
-
-      .candBio {
         text-align: justify;
         hyphens: auto;
       }
