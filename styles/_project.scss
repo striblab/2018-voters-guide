@@ -27,10 +27,13 @@ section.container-lg {
     max-width: 525px;
     text-align: left;
     margin: auto;
-    font-family: "Benton Sans";
-    font-size: 0.9em;
     padding-top: 30px;
     margin-bottom: 45px;
+
+    p {
+      font-family: "Benton Sans";
+      font-size: 0.9em;
+    }
   }
 
   //NAV styles
@@ -79,6 +82,7 @@ section.container-lg {
     h5 {
       order: 1;
       text-transform: uppercase;
+      font-size: 0.9em;
     }
 
     .candidate {
@@ -97,7 +101,7 @@ section.container-lg {
       }
 
       .party {
-        font-size: 0.8em;
+        font-size: 0.75em;
         font-family: "Benton Sans";
         text-align: center;
         text-transform: uppercase;
@@ -105,14 +109,16 @@ section.container-lg {
       }
 
       .candBio {
-        font-size: 0.9em;
+        font-size: 0.85em;
         font-family: "Benton Sans";
         text-align: justify;
         hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
       }
 
       span.inc {
-        font-size: 0.75em;
+        font-size: 0.6em;
         font-weight: normal;
         margin-left: 4px;
         position: relative;
@@ -138,18 +144,33 @@ section.container-lg {
       justify-content: space-between;
       align-items: center;
 
+      @media (max-width: 600px) {
+        flex-direction: column;
+      }
+
       h5 {
         order: 1;
         text-transform: uppercase;
+        font-size: 0.9em;
+
+        @media (max-width: 600px) {
+          order: 0;
+        }
       }
 
       .response {
         width: 40%;
-        font-size: 0.9em;
+        font-size: 0.85em;
         font-family: "Benton Sans";
         margin-bottom: 0;
         text-align: justify;
         hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+
+        @media (max-width: 600px) {
+          width: 80%;
+        }
 
         span {
           font-weight: bold;
@@ -159,6 +180,10 @@ section.container-lg {
 
     .issue .response:first-child {
       order: 0;
+
+      @media (max-width: 600px) {
+        order: 1;
+      }
     }
 
     .issue .response:last-child {

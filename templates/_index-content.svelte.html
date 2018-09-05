@@ -9,12 +9,15 @@
         some kind of nav filtery thingy goes here.
       </nav>
 
-			<p class="leadin">Since early in this campaign season, the Star Tribune has reported on candidates
-				statewide ahead of the Nov. 6 general election. You can find information on other
-				contests — including legislative races, county, city and school board races — at startribune.com/election. Ebitas
-				aut ut omnimpo riamus num harchic te pa il is volupti officab oratur? Caborem cupturit lab isi optaqui rae veriore, velenda
-				cum in nimped milluta tibuscias ad quam sit faccust estrum quas esciis asi.</p>
-		</div>
+      <div class="leadin">
+        <p>Since early in this campaign season, the Star Tribune has reported on candidates
+          statewide ahead of the Nov. 6 general election. You can find information on other
+          contests — including legislative races, county, city and school board races — at startribune.com/election. Ebitas
+          aut ut omnimpo riamus num harchic te pa il is volupti officab oratur? Caborem cupturit lab isi optaqui rae veriore, velenda
+          cum in nimped milluta tibuscias ad quam sit faccust estrum quas esciis asi.</p>
+        <p><a href="http://newsletters.startribune.com/pages/1788361/4540" target="_blank" rel="noopener">Follow our coverage of this campaign season by signing up to the Star Tribune's daily politics newsletter.</a></p>
+      </div>
+    </div>
 
 
 		{#each Object.entries(offices) as [officeName, office]}
@@ -38,6 +41,36 @@
         </div>
 				{/each}
 			</div>
+
+
+<!-- TESTING A DIFF LAYOUT ...
+
+      <div class="location">
+        <h3>{officeName}</h3>
+        <div class="map">
+          {#if office.distMap}<img src="{office.distMap}" alt="Minimap of this congressional district" />{/if}
+          {#if office.distAreas}<p class="distAreas">KEY AREAS: {office.distAreas}</p>{/if}
+        </div>
+      </div>
+
+				{#each office.head as head}
+        <div class="candidate">
+          <img src="/assets/images/headshot.jpg" alt="headshot for mockup"/>
+          <h4 class="candName">{head.first} {head.last}<span class="inc">{#if head.incumbent == "y"}(i){/if}</span></h4>
+          <p class="party">{head.party}</p>
+        </div>
+				{/each}
+
+      <h5>Bio</h5>
+
+			<div class="bios">
+				{#each office.bios as bio}
+          <p class="candBio">{bio.bio}</p>
+				{/each}
+			</div> -->
+
+
+
 
 			<div class="issues">
 				{#each Object.entries(office.issues) as [issueName, responses]}
