@@ -88,12 +88,12 @@ section.container-lg {
     text-align: center;
   }
 
-  h2.bodyName {
+  h2.bodyName,
+  h3.governor {
     padding-top: 100px;
   }
 
   div.office {
-    padding-top: 100px;
     margin-bottom: 75px;
 
     .officeTop {
@@ -103,22 +103,45 @@ section.container-lg {
       justify-content: space-between;
       align-items: center;
 
+      @media (max-width: 600px) {
+        flex-direction: column;
+      }
+
       .candidate,
       .bios {
         width: 40%;
+
+        @media (max-width: 600px) {
+          width: 90%;
+        }
       }
 
       .candidate:nth-child(2) {
         order: 0;
+
+        @media (max-width: 600px) {
+          order: 1;
+        }
       }
 
       .map {
         order: 1;
         width: 20%;
 
+        @media (max-width: 600px) {
+          order: 0;
+          width: 80%;
+        }
+
         img {
           width: 50%;
           margin-left: 25%;
+
+          @media (max-width: 600px) {
+            width: 30%;
+            margin-left: 0;
+            float: left;
+          }
         }
 
         h3 {
@@ -137,10 +160,18 @@ section.container-lg {
 
       .candidate:nth-child(3) {
         order: 2;
+
+        @media (max-width: 600px) {
+          order: 3;
+        }
       }
 
       .bios:nth-child(5) {
         order: 3;
+
+        @media (max-width: 600px) {
+          order: 2;
+        }
       }
 
       h5 {
@@ -149,6 +180,10 @@ section.container-lg {
         text-align: center;
         text-transform: uppercase;
         font-size: 0.9em;
+
+        @media (max-width: 600px) {
+          display: none;
+        }
       }
 
       .bios:last-child {
@@ -159,11 +194,21 @@ section.container-lg {
         img {
           width: 40%;
           margin-left: 30%;
+
+          @media (max-width: 600px) {
+            width: 30%;
+            margin-left: 0;
+            float: right;
+          }
         }
 
         .candName,
         .party {
           text-align: center;
+
+          @media (max-width: 600px) {
+            text-align: left;
+          }
         }
 
         .candName {
@@ -191,6 +236,10 @@ section.container-lg {
         font-size: 0.85em;
         text-align: justify;
         hyphens: auto;
+
+        @media (max-width: 600px) {
+          text-align: left;
+        }
       }
     }
 
@@ -214,6 +263,7 @@ section.container-lg {
 
           @media (max-width: 600px) {
             order: 0;
+            text-align: left;
           }
         }
 
@@ -228,7 +278,7 @@ section.container-lg {
           -ms-hyphens: auto;
 
           @media (max-width: 600px) {
-            width: 80%;
+            width: 90%;
           }
 
           span {
@@ -247,6 +297,10 @@ section.container-lg {
 
       .issue .response:last-child {
         order: 2;
+
+        @media (max-width: 600px) {
+          padding-top: 1em;
+        }
       }
     }
   }
