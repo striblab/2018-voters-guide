@@ -47,13 +47,10 @@ section.container-lg {
     a:link,
     a:visited {
       color: #080808;
-    }
-
-    a:hover li {
-      cursor: pointer;
-      color: #666;
-      background-color: #666;
-      border: 1px solid #666;
+      -webkit-transition: color 0.3s ease-out;
+      -moz-transition: color 0.3s ease-out;
+      -o-transition: color 0.3s ease-out;
+      transition: color 0.3s ease-out;
     }
 
     li {
@@ -67,22 +64,23 @@ section.container-lg {
       padding: 5px 10px 4px 10px;
       margin-right: 12px;
       display: inline;
+      -webkit-transition: background-color 0.3s ease-out;
+      -moz-transition: background-color 0.3s ease-out;
+      -o-transition: background-color 0.3s ease-out;
+      transition: background-color 0.3s ease-out;
     }
 
     li:last-child {
       margin-right: 0;
     }
+
+    a:hover li {
+      cursor: pointer;
+      color: #666;
+      background-color: #f5f5f5;
+      border: 1px solid #666;
+    }
   }
-
-  // nav ul li:hover {
-  //   color: #666;
-  //   border: 1px solid #666;
-  //   cursor: pointer;
-  // }
-
-  // nav ul li:hover a:hover {
-  //   color: #666;
-  // }
 
   //MAIN ISSUE styles
   h2,
@@ -95,117 +93,37 @@ section.container-lg {
   }
 
   div.office {
+    padding-top: 100px;
     margin-bottom: 75px;
 
-    h3 {
-      margin-bottom: 0.2em;
-      padding-top: 0.2em;
-    }
-  }
+    .officeTop {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
 
-  // .location {
-  //   width: 25%;
-  //   margin: auto;
+      .candidate,
+      .bios {
+        width: 40%;
+      }
 
-  //   img {
-  //     width: 50%;
-  //     margin-left: 25%;
-  //   }
-
-  //   .distAreas {
-  //     font-family: "Benton Sans";
-  //     font-size: 0.8em;
-  //     text-align: center;
-  //   }
-  // }
-
-  // .bios {
-  //   font-family: "Benton Sans";
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: space-between;
-  //   align-items: center;
-
-  //   h5 {
-  //     order: 1;
-  //     text-transform: uppercase;
-  //     font-size: 0.9em;
-  //   }
-
-  //   .candidate {
-  //     width: 40%;
-  //     text-transform: none;
-
-  //     img {
-  //       width: 40%;
-  //       margin-left: 30%;
-  //     }
-
-  //     .candName {
-  //       font-size: 1.1em;
-  //       text-align: center;
-  //       margin-bottom: 0;
-  //     }
-
-  //     .party {
-  //       font-size: 0.75em;
-  //       font-family: "Benton Sans";
-  //       text-align: center;
-  //       text-transform: uppercase;
-  //       letter-spacing: 0.15em;
-  //     }
-
-  //     .candBio {
-  //       font-size: 0.85em;
-  //       font-family: "Benton Sans";
-  //       text-align: justify;
-  //       hyphens: auto;
-  //       -webkit-hyphens: auto;
-  //       -ms-hyphens: auto;
-  //     }
-
-  //     span.inc {
-  //       font-size: 0.6em;
-  //       font-weight: normal;
-  //       margin-left: 4px;
-  //       position: relative;
-  //       top: -2px;
-  //     }
-  //   }
-
-  //   .candidate:first-child {
-  //     order: 0;
-  //   }
-
-  //   .candidate:last-child {
-  //     order: 2;
-  //   }
-  // }
-
-  .altlayout {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-
-    .candidate,
-    .bios {
-      width: 40%;
-    }
-
-    .candidate:nth-child(2) {
-      order: 0;
-    }
-
-    .location {
-      order: 1;
-      width: 20%;
+      .candidate:nth-child(2) {
+        order: 0;
+      }
 
       .map {
+        order: 1;
+        width: 20%;
+
         img {
           width: 50%;
           margin-left: 25%;
+        }
+
+        h3 {
+          margin-bottom: 0.2em;
+          padding-top: 0.2em;
         }
 
         .distAreas {
@@ -216,120 +134,120 @@ section.container-lg {
           margin-left: 10%;
         }
       }
-    }
 
-    .candidate:nth-child(3) {
-      order: 2;
-    }
-
-    .bios:nth-child(5) {
-      order: 3;
-    }
-
-    h5 {
-      order: 4;
-      width: 20%;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 0.9em;
-    }
-
-    .bios:last-child {
-      order: 5;
-    }
-
-    .candidate {
-      img {
-        width: 40%;
-        margin-left: 30%;
+      .candidate:nth-child(3) {
+        order: 2;
       }
 
-      .candName,
-      .party {
-        text-align: center;
-      }
-
-      .candName {
-        margin-bottom: 0;
-
-        span.inc {
-          font-weight: normal;
-          font-size: 0.6em;
-          margin-left: 4px;
-          position: relative;
-          top: -2px;
-        }
-      }
-
-      .party {
-        font-family: "Benton Sans";
-        font-size: 0.75em;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-      }
-    }
-
-    .bios .candBio {
-      font-family: "Benton Sans";
-      font-size: 0.85em;
-      text-align: justify;
-      hyphens: auto;
-    }
-  }
-
-  .issues {
-    .issue {
-      padding: 1em 0em;
-      border-bottom: 1px solid #eeeeee;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-
-      @media (max-width: 600px) {
-        flex-direction: column;
+      .bios:nth-child(5) {
+        order: 3;
       }
 
       h5 {
-        order: 1;
+        order: 4;
+        width: 20%;
+        text-align: center;
         text-transform: uppercase;
         font-size: 0.9em;
+      }
 
-        @media (max-width: 600px) {
-          order: 0;
+      .bios:last-child {
+        order: 5;
+      }
+
+      .candidate {
+        img {
+          width: 40%;
+          margin-left: 30%;
+        }
+
+        .candName,
+        .party {
+          text-align: center;
+        }
+
+        .candName {
+          margin-bottom: 0;
+
+          span.inc {
+            font-weight: normal;
+            font-size: 0.6em;
+            margin-left: 4px;
+            position: relative;
+            top: -2px;
+          }
+        }
+
+        .party {
+          font-family: "Benton Sans";
+          font-size: 0.75em;
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
         }
       }
 
-      .response {
-        width: 40%;
-        font-size: 0.85em;
+      .bios .candBio {
         font-family: "Benton Sans";
-        margin-bottom: 0;
+        font-size: 0.85em;
         text-align: justify;
         hyphens: auto;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
+      }
+    }
+
+    .issues {
+      .issue {
+        padding: 1em 0em;
+        border-bottom: 1px solid #eeeeee;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
         @media (max-width: 600px) {
-          width: 80%;
+          flex-direction: column;
         }
 
-        span {
-          font-weight: bold;
+        h5 {
+          order: 1;
+          text-transform: uppercase;
+          font-size: 0.9em;
+
+          @media (max-width: 600px) {
+            order: 0;
+          }
+        }
+
+        .response {
+          width: 40%;
+          font-size: 0.85em;
+          font-family: "Benton Sans";
+          margin-bottom: 0;
+          text-align: justify;
+          hyphens: auto;
+          -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+
+          @media (max-width: 600px) {
+            width: 80%;
+          }
+
+          span {
+            font-weight: bold;
+          }
         }
       }
-    }
 
-    .issue .response:first-child {
-      order: 0;
+      .issue .response:first-child {
+        order: 0;
 
-      @media (max-width: 600px) {
-        order: 1;
+        @media (max-width: 600px) {
+          order: 1;
+        }
       }
-    }
 
-    .issue .response:last-child {
-      order: 2;
+      .issue .response:last-child {
+        order: 2;
+      }
     }
   }
 }
