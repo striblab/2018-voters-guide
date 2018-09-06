@@ -37,6 +37,52 @@ section.container-lg {
   }
 
   //NAV styles
+  nav ul {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 40px auto 25px auto;
+
+    a,
+    a:link,
+    a:visited {
+      color: #080808;
+    }
+
+    a:hover li {
+      cursor: pointer;
+      color: #666;
+      background-color: #666;
+      border: 1px solid #666;
+    }
+
+    li {
+      min-width: 20%;
+      background-color: white;
+      text-transform: uppercase;
+      font-size: 0.75em;
+      font-family: "Benton Sans";
+      border: 1px solid #080808;
+      border-radius: 6px;
+      padding: 5px 10px 4px 10px;
+      margin-right: 12px;
+      display: inline;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // nav ul li:hover {
+  //   color: #666;
+  //   border: 1px solid #666;
+  //   cursor: pointer;
+  // }
+
+  // nav ul li:hover a:hover {
+  //   color: #666;
+  // }
 
   //MAIN ISSUE styles
   h2,
@@ -53,85 +99,181 @@ section.container-lg {
 
     h3 {
       margin-bottom: 0.2em;
+      padding-top: 0.2em;
     }
   }
 
-  .location {
-    width: 25%;
-    margin: auto;
+  // .location {
+  //   width: 25%;
+  //   margin: auto;
 
-    img {
-      width: 50%;
-      margin-left: 25%;
-    }
+  //   img {
+  //     width: 50%;
+  //     margin-left: 25%;
+  //   }
 
-    .distAreas {
-      font-family: "Benton Sans";
-      font-size: 0.8em;
-      text-align: center;
-    }
-  }
+  //   .distAreas {
+  //     font-family: "Benton Sans";
+  //     font-size: 0.8em;
+  //     text-align: center;
+  //   }
+  // }
 
-  .bios {
-    font-family: "Benton Sans";
+  // .bios {
+  //   font-family: "Benton Sans";
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  //   align-items: center;
+
+  //   h5 {
+  //     order: 1;
+  //     text-transform: uppercase;
+  //     font-size: 0.9em;
+  //   }
+
+  //   .candidate {
+  //     width: 40%;
+  //     text-transform: none;
+
+  //     img {
+  //       width: 40%;
+  //       margin-left: 30%;
+  //     }
+
+  //     .candName {
+  //       font-size: 1.1em;
+  //       text-align: center;
+  //       margin-bottom: 0;
+  //     }
+
+  //     .party {
+  //       font-size: 0.75em;
+  //       font-family: "Benton Sans";
+  //       text-align: center;
+  //       text-transform: uppercase;
+  //       letter-spacing: 0.15em;
+  //     }
+
+  //     .candBio {
+  //       font-size: 0.85em;
+  //       font-family: "Benton Sans";
+  //       text-align: justify;
+  //       hyphens: auto;
+  //       -webkit-hyphens: auto;
+  //       -ms-hyphens: auto;
+  //     }
+
+  //     span.inc {
+  //       font-size: 0.6em;
+  //       font-weight: normal;
+  //       margin-left: 4px;
+  //       position: relative;
+  //       top: -2px;
+  //     }
+  //   }
+
+  //   .candidate:first-child {
+  //     order: 0;
+  //   }
+
+  //   .candidate:last-child {
+  //     order: 2;
+  //   }
+  // }
+
+  .altlayout {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
-    h5 {
+    .candidate,
+    .bios {
+      width: 40%;
+    }
+
+    .candidate:nth-child(2) {
+      order: 0;
+    }
+
+    .location {
       order: 1;
+      width: 20%;
+
+      .map {
+        img {
+          width: 50%;
+          margin-left: 25%;
+        }
+
+        .distAreas {
+          font-family: "Benton Sans";
+          text-align: center;
+          font-size: 0.75em;
+          width: 80%;
+          margin-left: 10%;
+        }
+      }
+    }
+
+    .candidate:nth-child(3) {
+      order: 2;
+    }
+
+    .bios:nth-child(5) {
+      order: 3;
+    }
+
+    h5 {
+      order: 4;
+      width: 20%;
+      text-align: center;
       text-transform: uppercase;
       font-size: 0.9em;
     }
 
-    .candidate {
-      width: 40%;
-      text-transform: none;
+    .bios:last-child {
+      order: 5;
+    }
 
+    .candidate {
       img {
         width: 40%;
         margin-left: 30%;
       }
 
-      .candName {
-        font-size: 1.1em;
+      .candName,
+      .party {
         text-align: center;
+      }
+
+      .candName {
         margin-bottom: 0;
+
+        span.inc {
+          font-weight: normal;
+          font-size: 0.6em;
+          margin-left: 4px;
+          position: relative;
+          top: -2px;
+        }
       }
 
       .party {
-        font-size: 0.75em;
         font-family: "Benton Sans";
-        text-align: center;
+        font-size: 0.75em;
         text-transform: uppercase;
         letter-spacing: 0.15em;
       }
-
-      .candBio {
-        font-size: 0.85em;
-        font-family: "Benton Sans";
-        text-align: justify;
-        hyphens: auto;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-      }
-
-      span.inc {
-        font-size: 0.6em;
-        font-weight: normal;
-        margin-left: 4px;
-        position: relative;
-        top: -2px;
-      }
     }
 
-    .candidate:first-child {
-      order: 0;
-    }
-
-    .candidate:last-child {
-      order: 2;
+    .bios .candBio {
+      font-family: "Benton Sans";
+      font-size: 0.85em;
+      text-align: justify;
+      hyphens: auto;
     }
   }
 

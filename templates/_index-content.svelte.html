@@ -4,11 +4,7 @@
       <h5 class="font-popular-light">Candidates</h5>
 			<h1>2018 Minnesota Voter's Guide</h1>
       <p class="byline">By Star Tribune Staff</p>
-
-      <nav>
-        some kind of nav filtery thingy goes here.
-      </nav>
-
+      <!--Social buttons go here-->
       <div class="leadin">
         <p>Since early in this campaign season, the Star Tribune has reported on candidates
           statewide ahead of the Nov. 6 general election. You can find information on other
@@ -17,14 +13,24 @@
           cum in nimped milluta tibuscias ad quam sit faccust estrum quas esciis asi.</p>
         <p><a href="http://newsletters.startribune.com/pages/1788361/4540" target="_blank" rel="noopener">Follow our coverage of this campaign season by signing up to the Star Tribune's daily politics newsletter.</a></p>
       </div>
+
+      <!--NAVIGATION-->
+       <nav>
+        <ul>
+          <a href="#governor"><li>Governor</li></a>
+          <a href="#senate"><li>U.S. Senate</li></a>
+          <a href="#house"><li>U.S. House</li></a>
+          <a href="#statewide"><li>Statewide</li></a>
+        </ul>
+      </nav>
     </div>
 
 
 		{#each Object.entries(offices) as [officeName, office]}
-    {#if office.bodyName}<h2 class="bodyName">{office.bodyName}</h2>{/if}
-		<div class="office office-{office.officeClass}">
+    {#if office.bodyName}<h2 class="office.bodyID" id="office.bodyID">{office.bodyName}</h2>{/if}
+		<div class="office office-{office.officeClass}" id="{office.officeClass}">
 
-			<h3>{officeName}</h3>
+			<!-- <h3>{officeName}</h3>
       <div class="location">
         {#if office.distMap}<img src="{office.distMap}" alt="Minimap of this congressional district" />{/if}
         {#if office.distAreas}<p class="distAreas">KEY AREAS: {office.distAreas}</p>{/if}
@@ -40,34 +46,35 @@
           <p class="candBio">{bio.bio}</p>
         </div>
 				{/each}
-			</div>
+			</div> -->
 
 
-<!-- TESTING A DIFF LAYOUT ...
-
+<!-- TESTING A DIFF LAYOUT ... -->
+    <div class="altlayout">
       <div class="location">
-        <h3>{officeName}</h3>
         <div class="map">
           {#if office.distMap}<img src="{office.distMap}" alt="Minimap of this congressional district" />{/if}
-          {#if office.distAreas}<p class="distAreas">KEY AREAS: {office.distAreas}</p>{/if}
+          <h3>{officeName}</h3>
+          {#if office.distAreas}<p class="distAreas">{office.distAreas}</p>{/if}
         </div>
       </div>
 
-				{#each office.head as head}
-        <div class="candidate">
-          <img src="/assets/images/headshot.jpg" alt="headshot for mockup"/>
-          <h4 class="candName">{head.first} {head.last}<span class="inc">{#if head.incumbent == "y"}(i){/if}</span></h4>
-          <p class="party">{head.party}</p>
-        </div>
-				{/each}
+			{#each office.heads as head}
+      <div class="candidate">
+        <img src="/assets/images/headshot.jpg" alt="headshot for mockup"/>
+        <h4 class="candName">{head.first} {head.last}<span class="inc">{#if head.incumbent == "y"}(i){/if}</span></h4>
+        <p class="party">{head.party}</p>
+      </div>
+			{/each}
 
       <h5>Bio</h5>
 
-			<div class="bios">
-				{#each office.bios as bio}
-          <p class="candBio">{bio.bio}</p>
-				{/each}
-			</div> -->
+			{#each office.bios as bio}
+      <div class="bios">
+        <p class="candBio">{bio.bio}</p>
+      </div>
+			{/each}
+    </div>
 
 
 
@@ -132,12 +139,14 @@
           });
 
           let o = pick(office[0], [
+            "bodyID",
             "bodyName",
             "officeClass",
             "distMap",
             "distAreas"
           ]);
 
+          o.heads = office;
           o.bios = office;
           o.issues = issues;
 
