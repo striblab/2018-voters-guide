@@ -27,7 +27,7 @@
 
 
 		{#each Object.entries(offices) as [officeName, office]}
-    {#if office.bodyName}<h2 class="{office.bodyID}" id="{office.bodyID}">{office.bodyName}</h2>{/if}
+    {#if office.bodyName}<h2 class="bodyName" id="{office.bodyID}">{office.bodyName}</h2>{/if}
 		<div class="office office-{office.officeClass}" id="{office.officeClass}">
 
       <div class="officeTop">
@@ -39,9 +39,10 @@
 
         {#each office.heads as head}
         <div class="candidate">
-          <img src="/assets/images/headshot.jpg" alt="headshot for mockup"/>
+          <img src="{head.photocrop}" alt="headshot"/>
           <h4 class="candName">{head.first} {head.last}<span class="inc">{#if head.incumbent == "y"}(i){/if}</span></h4>
           <p class="party">{head.party}</p>
+          <p class="mBio">{head.bio}</p>
         </div>
         {/each}
 
