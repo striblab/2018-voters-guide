@@ -318,4 +318,23 @@ section.container-lg {
       }
     }
   }
+
+  .credits {
+    margin-top: 150px;
+    padding-top: 50px;
+    border-top: 1px solid rgb(59, 59, 59);
+    font-family: "Benton Sans";
+
+    h4 {
+      text-transform: uppercase;
+      font-size: 1em;
+      letter-spacing: 0.5px;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-family: "Benton Sans";
+      font-size: 0.85em;
+    }
+  }
 }
