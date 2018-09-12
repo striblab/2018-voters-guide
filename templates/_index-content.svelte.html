@@ -20,7 +20,7 @@
           <a href="#governor"><li>Governor</li></a>
           <a href="#senate"><li>U.S. Senate</li></a>
           <a href="#house"><li>U.S. House</li></a>
-          <a href="#statewide"><li>Statewide</li></a>
+          <a href="#statewide"><li>Statewide offices</li></a>
         </ul>
       </nav>
     </div>
@@ -59,7 +59,13 @@
 			<div class="issues">
 				{#each Object.entries(office.issues) as [issueName, responses]}
 				<div class="issue">
-					<h5>{ issueName }</h5>
+          <div class="issueName">
+					  <h5>{ issueName }</h5>
+            <div class="expand">
+              <button class="more">+</button>
+              <button class="less">-</button>
+            </div>
+          </div>
 
 					{#each responses as response}
 					<p class="response {response.last}">
