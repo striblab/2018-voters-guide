@@ -12,7 +12,6 @@
 //import utilsFn from './utils.js';
 //utilsFn({ });
 
-
 // Import local ES6 modules like this:
 //import utilsFn from './utils.js';
 
@@ -35,4 +34,41 @@
 //   }
 // });
 
+import { throttle } from 'lodash';
 
+var navigationTop;
+
+// Set place holder.
+$('.navigation-placeholder').css('height', $('#navigation').height() + 'px');
+
+// Nav might move because of ads or something
+var updateNavTopInterval = window.setInterval(() => {
+  updateNavTop();
+}, 1000);
+updateNavTop();
+
+// Make throttled updated
+var throttledUpdateStickyNav = throttle(() => {
+  updateStickyNav();
+}, 50);
+
+// Add to scroll event
+window.addEventListener('scroll', throttledUpdateStickyNav);
+
+function updateStickyNav() {
+  // See if we are past
+  if (window.pageYOffset >= navigationTop) {
+    $('.navigation-placeholder').addClass('sticky-on');
+    $('#navigation').addClass('sticky');
+  }
+  else {
+    $('.navigation-placeholder').removeClass('sticky-on');
+    $('#navigation').removeClass('sticky');
+  }
+}
+
+// Check where the nav container is
+function updateNavTop() {
+  // Mark navigation top.  This can change due to ads or reloads
+  navigationTop = $('.navigation-marker').offset().top;
+}

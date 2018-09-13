@@ -14,6 +14,7 @@ section.container-lg {
   .header h1 {
     padding-top: 0.3em;
     line-height: 1.1em;
+    font-size: 3.5em;
   }
 
   .header h5 {
@@ -37,14 +38,52 @@ section.container-lg {
   }
 
   //NAV styles
+  // NAV default styles
+  .l-navigation-shortnav-container {
+    box-shadow: none;
+  }
+
+  #navigation {
+    width: 100%;
+    background-color: white;
+    z-index: 150;
+  }
+
+  .sticky {
+    position: fixed;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #e8e8e8;
+
+    @media (max-width: 545px) {
+      padding-bottom: 0;
+    }
+  }
+
+  // Placeholder
+  .navigation-placeholder {
+    display: none;
+
+    &.sticky-on {
+      display: block;
+    }
+  }
+
   nav ul {
     width: 100%;
     display: block;
     text-align: center;
-    margin: 40px auto 25px auto;
 
     @media (max-width: 600px) {
-      width: 75%;
+      width: 70%;
+      margin: 0px auto 10px auto;
+    }
+
+    @media (max-width: 385px) {
+      width: 78%;
     }
 
     a,
@@ -105,7 +144,7 @@ section.container-lg {
 
   h2.bodyName,
   div.office-governor h3 {
-    font-size: 3em;
+    font-size: 2.75em;
     padding-top: 0;
   }
 
@@ -274,6 +313,7 @@ section.container-lg {
 
         .candName {
           margin-bottom: 0;
+          font-size: 1.1em;
 
           span.inc {
             font-weight: normal;
