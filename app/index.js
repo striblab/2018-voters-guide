@@ -102,57 +102,57 @@ var soslength = $('#sos').outerHeight();
 
 new ScrollMagic.Scene({ triggerElement: '#governor', duration: govlength })
   .setClassToggle('#navgov', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#senspec', duration: sensplength })
   .setClassToggle('#navsen', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#sensched', duration: sensclength })
   .setClassToggle('#navsen', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#dist1', duration: d1length })
   .setClassToggle('#navhouse', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#dist2', duration: d2length })
   .setClassToggle('#navhouse', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#dist3', duration: d3length })
   .setClassToggle('#navhouse', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#dist4', duration: d4length })
   .setClassToggle('#navhouse', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#dist5', duration: d5length })
   .setClassToggle('#navhouse', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#dist6', duration: d6length })
   .setClassToggle('#navhouse', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#dist7', duration: d7length })
   .setClassToggle('#navhouse', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#dist8', duration: d8length })
   .setClassToggle('#navhouse', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#ag', duration: aglength })
   .setClassToggle('#navstate', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#aud', duration: audlength })
   .setClassToggle('#navstate', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 new ScrollMagic.Scene({ triggerElement: '#sos', duration: soslength })
   .setClassToggle('#navstate', 'active') // add class toggle
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);

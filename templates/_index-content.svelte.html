@@ -1,5 +1,5 @@
 <div class="strib-styles ssa ssb ssc">
-  <img class="bigimg" src="assets/images/VOTE_big.jpg" alt="big V-O-T-E illustration" />
+  <img class="bigimg" src="http://static.startribune.com/news/projects/all/2018-voters-guide/assets/images/VOTE_big.jpg" alt="big V-O-T-E illustration" />
 	<section class="container-lg">
 		<div class="header">
 			<h1>2018 Minnesota Election Guide</h1>
@@ -39,14 +39,14 @@
 
       <div class="officeTop">
         <div class="map">
-          {#if office.distMap}<img src="{office.distMap}" alt="Minimap of this congressional district" />{/if}
+          {#if office.distMap}<img src="http://static.startribune.com/news/projects/all/2018-voters-guide{office.distMap}" alt="Minimap of this congressional district" />{/if}
           <h3>{officeName}</h3>
           {#if office.distAreas}<p class="distAreas">{office.distAreas}</p>{/if}
         </div>
 
         {#each office.heads as head}
         <div class="candidate">
-          <img src="{head.photocrop}" alt="headshot"/>
+          <img src="http://static.startribune.com/news/projects/all/2018-voters-guide{head.photocrop}" alt="headshot"/>
           <h4 class="candName">{head.first} {head.last}<span class="inc">{#if head.incumbent == "y"}(i){/if}</span></h4>
           <p class="party">{head.party}</p>
           <p class="mBio">{head.bio}</p>
