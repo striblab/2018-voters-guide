@@ -1,16 +1,19 @@
 <div class="strib-styles ssa ssb ssc">
+  <img class="bigimg" src="assets/images/VOTE_big.jpg" alt="big V-O-T-E illustration" />
 	<section class="container-lg">
 		<div class="header">
-      <h5 class="font-popular-light">Candidates</h5>
-			<h1>2018 Minnesota Voter's Guide</h1>
-      <p class="byline">By Star Tribune Staff</p>
-      <!--Social buttons go here-->
+			<h1>2018 Minnesota Election Guide</h1>
+      <h2>Who's running in major races and where they stand on the issues</h2>
+      <div class="byline">
+        <address>By Star Tribune staff</address>
+        <span class="spacer-alt"></span>
+        <time pubdate datetime="2017-07-30T16:00:00">Sept. 19, 2018 &mdash; 9:00am</time>
+      </div>
+      <!-- share -->
       <div class="leadin">
-        <p>Since early in this campaign season, the Star Tribune has reported on candidates
-          statewide ahead of the Nov. 6 general election. You can find information on other
-          contests — including legislative races, county, city and school board races — at startribune.com/election. Ebitas
-          aut ut omnimpo riamus num harchic te pa il is volupti officab oratur? Caborem cupturit lab isi optaqui rae veriore, velenda
-          cum in nimped milluta tibuscias ad quam sit faccust estrum quas esciis asi.</p>
+        <p>It’s been decades since Minnesota saw an election year as consequential as 2018. With an open race for governor, both U.S. Senate seats on the ballot, a handful of highly competitive U.S. House races, and control of the Legislature up for grabs, the decisions made by Minnesota voters this year will echo across state and national politics for many more to come.</p>
+        <p>The Star Tribune has invited candidates to participate in its online and printed election guides, asking them to provide information about themselves and views on top issues ahead of the Nov. 6 general election. You’ll find information in this guide about the candidates for the governor’s office and other statewide executive posts, along with the candidates for U.S. Senate and House.</p>
+        <p>Minnesotans don’t have to wait until Nov. 6 to vote; early voting begins on Sept. 21, at which point all eligible voters may obtain an absentee ballot through the mail or in person. Keep reading the Star Tribune for more coverage of campaigns and candidates right up to Election Day and continuing coverage after the votes are counted.</p>
         <p><a href="http://newsletters.startribune.com/pages/1788361/4540" target="_blank" rel="noopener">Follow our coverage of this campaign season by signing up to the Star Tribune's daily politics newsletter.</a></p>
       </div>
 
@@ -20,10 +23,10 @@
       <div class="cf" id="navigation">
         <nav>
           <ul>
-            <a href="#governor"><li>Governor</li></a>
-            <a href="#senate"><li>U.S. Senate</li></a>
-            <a href="#house"><li>U.S. House</li></a>
-            <a href="#statewide"><li>State offices</li></a>
+            <a id="navgov" href="#governor"><li>Governor</li></a>
+            <a id="navsen" href="#senate"><li>U.S. Senate</li></a>
+            <a id="navhouse" href="#house"><li>U.S. House</li></a>
+            <a id="navstate" href="#statewide"><li>State offices</li></a>
           </ul>
         </nav>
       </div>
@@ -31,7 +34,7 @@
 
 
 		{#each Object.entries(offices) as [officeName, office]}
-    {#if office.bodyName}<h2 class="bodyName" id="{office.bodyID}">{office.bodyName}</h2>{/if}
+    {#if office.bodyName}<h2 class="bodyName">{office.bodyName}</h2>{/if}
 		<div class="office office-{office.officeClass}" id="{office.officeClass}">
 
       <div class="officeTop">
@@ -80,15 +83,16 @@
 				{/each}
 			</div>
 		</div>
+    <!-- {#if office.bodyID}</div>{/if} -->
 		{/each}
 
     <div class="credits">
       <h4>Credits</h4>
-      <p><strong>Contributors:</strong> Names here and herey and herey</p>
+      <p><strong>Contributors:</strong> Judy Keen, Jessie Van Berkel, Susan Hilliard, Patrick Condon</p>
       <p><strong>Design:</strong> C.J. Sinner</p>
       <p><strong>Development:</strong> C.J. Sinner, Alan Palazzolo</p>
-      <p><strong>Photography:</strong> Glen Stubbe, Anthony Souffle</p>
-      <p><strong>Illustration:</strong> Name hereyey</p>
+      <p><strong>Photography:</strong> Glen Stubbe, Star Tribune, provided by campaigns, Associated Press</p>
+      <p><strong>Illustration:</strong> Tim Enthoven, Special to the Star Tribune</p>
       <p><strong>Copy editing:</strong> Name hereyey</p>
     </div>
 	</section>

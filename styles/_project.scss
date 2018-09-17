@@ -3,37 +3,43 @@
  */
 
 //WIDTHS
+img.bigimg {
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+}
+
 section.container-lg {
   max-width: 900px;
 
   //HEADER styles
   .header {
     text-align: center;
-  }
 
-  .header h1 {
-    padding-top: 0.3em;
-    line-height: 1.1em;
-    font-size: 3.5em;
-  }
+    h1 {
+      padding-top: 1em;
+      margin-bottom: 0;
+      line-height: 1.1em;
+      font-size: 4em;
+    }
 
-  .header h5 {
-    text-transform: uppercase;
-    font-size: 0.9em;
-    letter-spacing: 0.08em;
-    padding-top: 40px;
-  }
+    h2 {
+      font-size: 1.9em;
+      margin-bottom: 2em;
+    }
 
-  .header .leadin {
-    max-width: 525px;
-    text-align: left;
-    margin: auto;
-    padding-top: 30px;
-    margin-bottom: 45px;
+    .leadin {
+      max-width: 525px;
+      text-align: left;
+      margin: auto;
+      padding-top: 30px;
+      margin-bottom: 45px;
 
-    p {
-      font-family: "Benton Sans";
-      font-size: 0.9em;
+      p {
+        font-family: "Benton Sans";
+        font-size: 0.9em;
+      }
     }
   }
 
@@ -134,6 +140,10 @@ section.container-lg {
       background-color: #f5f5f5;
       border: 1px solid #666;
     }
+
+    a.active li {
+      background-color: #e8e8e8;
+    }
   }
 
   //MAIN ISSUE styles
@@ -155,7 +165,7 @@ section.container-lg {
 
     @media (max-width: 600px) {
       padding-top: 100px;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.2em;
     }
   }
 
@@ -380,6 +390,13 @@ section.container-lg {
           h5 {
             text-transform: uppercase;
             font-size: 0.9em;
+            text-align: center;
+            padding-left: 0.3em;
+            padding-right: 0.3em;
+
+            @media (max-width: 600px) {
+              padding-left: 0;
+            }
           }
 
           .expand {
@@ -441,10 +458,16 @@ section.container-lg {
     }
   }
 
+  div.office-ag,
+  div.office-aud,
+  div.office-sos {
+    margin-bottom: 0;
+  }
+
   .credits {
-    margin-top: 150px;
+    margin-top: 250px;
     padding-top: 50px;
-    border-top: 1px solid rgb(59, 59, 59);
+    border-top: 1px solid #666;
     font-family: "Benton Sans";
 
     h4 {

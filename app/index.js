@@ -72,3 +72,87 @@ function updateNavTop() {
   // Mark navigation top.  This can change due to ads or reloads
   navigationTop = $('.navigation-marker').offset().top;
 }
+
+//nav SCROLLMAGIC
+// init controller
+
+var controller = new ScrollMagic.Controller();
+
+// fetch office heights
+
+var govlength = $('#governor').outerHeight();
+
+var sensplength = $('#senspec').outerHeight();
+var sensclength = $('#sensched').outerHeight();
+
+var d1length = $('#dist1').outerHeight();
+var d2length = $('#dist2').outerHeight();
+var d3length = $('#dist3').outerHeight();
+var d4length = $('#dist4').outerHeight();
+var d5length = $('#dist5').outerHeight();
+var d6length = $('#dist6').outerHeight();
+var d7length = $('#dist7').outerHeight();
+var d8length = $('#dist8').outerHeight();
+
+var aglength = $('#ag').outerHeight();
+var audlength = $('#aud').outerHeight();
+var soslength = $('#sos').outerHeight();
+
+// build scenes
+
+new ScrollMagic.Scene({ triggerElement: '#governor', duration: govlength })
+  .setClassToggle('#navgov', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#senspec', duration: sensplength })
+  .setClassToggle('#navsen', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#sensched', duration: sensclength })
+  .setClassToggle('#navsen', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#dist1', duration: d1length })
+  .setClassToggle('#navhouse', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#dist2', duration: d2length })
+  .setClassToggle('#navhouse', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#dist3', duration: d3length })
+  .setClassToggle('#navhouse', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#dist4', duration: d4length })
+  .setClassToggle('#navhouse', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#dist5', duration: d5length })
+  .setClassToggle('#navhouse', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#dist6', duration: d6length })
+  .setClassToggle('#navhouse', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#dist7', duration: d7length })
+  .setClassToggle('#navhouse', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#dist8', duration: d8length })
+  .setClassToggle('#navhouse', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#ag', duration: aglength })
+  .setClassToggle('#navstate', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#aud', duration: audlength })
+  .setClassToggle('#navstate', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: '#sos', duration: soslength })
+  .setClassToggle('#navstate', 'active') // add class toggle
+  .addIndicators()
+  .addTo(controller);
