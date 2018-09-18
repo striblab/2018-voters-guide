@@ -35,6 +35,7 @@
 // });
 
 import { throttle } from 'lodash';
+import ScrollMagic from 'scrollmagic';
 
 var navigationTop;
 

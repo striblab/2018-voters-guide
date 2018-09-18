@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.5",
-    "query-string": "^4.3.2"
+    "query-string": "^4.3.2",
+    "scrollmagic": "^2.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.54",
