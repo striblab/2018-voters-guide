@@ -80,23 +80,23 @@ var controller = new ScrollMagic.Controller();
 
 // fetch office heights
 
-var govlength = $('#governor').outerHeight();
+var govlength = $('#governor').outerHeight(true);
 
-var sensplength = $('#senspec').outerHeight();
+var sensplength = $('#senspec').outerHeight(true);
 var sensclength = $('#sensched').outerHeight();
 
-var d1length = $('#dist1').outerHeight();
-var d2length = $('#dist2').outerHeight();
-var d3length = $('#dist3').outerHeight();
-var d4length = $('#dist4').outerHeight();
-var d5length = $('#dist5').outerHeight();
-var d6length = $('#dist6').outerHeight();
-var d7length = $('#dist7').outerHeight();
-var d8length = $('#dist8').outerHeight();
+var d1length = $('#dist1').outerHeight(true);
+var d2length = $('#dist2').outerHeight(true);
+var d3length = $('#dist3').outerHeight(true);
+var d4length = $('#dist4').outerHeight(true);
+var d5length = $('#dist5').outerHeight(true);
+var d6length = $('#dist6').outerHeight(true);
+var d7length = $('#dist7').outerHeight(true);
+var d8length = $('#dist8').outerHeight(true);
 
-var aglength = $('#ag').outerHeight();
-var audlength = $('#aud').outerHeight();
-var soslength = $('#sos').outerHeight();
+var aglength = $('#ag').outerHeight(true);
+var audlength = $('#aud').outerHeight(true);
+var soslength = $('#sos').outerHeight(true);
 
 // build scenes
 
