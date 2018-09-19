@@ -36,6 +36,7 @@
 
 import { throttle } from 'lodash';
 import ScrollMagic from 'scrollmagic';
+import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
 var navigationTop;
 
