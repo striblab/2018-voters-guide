@@ -2,6 +2,10 @@
  * Project specific styling.
  */
 
+div.resultsBanner {
+  margin-top: 25px;
+}
+
 //WIDTHS
 img.bigimg {
   width: 100%;
@@ -71,6 +75,7 @@ section.container-lg {
     border-bottom: 1px solid #e8e8e8;
 
     @media (max-width: 545px) {
+      padding-top: 8px;
       padding-bottom: 0;
     }
   }
@@ -205,9 +210,11 @@ section.container-lg {
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #eeeeee;
 
       @media (max-width: 600px) {
         flex-direction: column;
+        border-bottom: none;
       }
 
       .candidate,

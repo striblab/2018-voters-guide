@@ -36,7 +36,6 @@
 
 import { throttle } from 'lodash';
 import ScrollMagic from 'scrollmagic';
-import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
 var navigationTop;
 
@@ -85,7 +84,7 @@ var controller = new ScrollMagic.Controller();
 var govlength = $('#governor').outerHeight(true);
 
 var sensplength = $('#senspec').outerHeight(true);
-var sensclength = $('#sensched').outerHeight();
+var sensclength = $('#sensched').outerHeight(true);
 
 var d1length = $('#dist1').outerHeight(true);
 var d2length = $('#dist2').outerHeight(true);
