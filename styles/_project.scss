@@ -482,6 +482,10 @@ section.container-lg {
   div.office-aud,
   div.office-sos {
     margin-bottom: 0;
+
+    .officeTop {
+      border-bottom: none;
+    }
   }
 
   .credits {
