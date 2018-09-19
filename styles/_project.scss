@@ -29,6 +29,12 @@ section.container-lg {
       margin-bottom: 2em;
     }
 
+    .byline address {
+      @media (max-width: 600px) {
+        color: #080808;
+      }
+    }
+
     .leadin {
       max-width: 525px;
       text-align: left;
@@ -142,7 +148,7 @@ section.container-lg {
     }
 
     a.active li {
-      background-color: #e8e8e8;
+      background-color: white;
     }
   }
 
@@ -292,6 +298,7 @@ section.container-lg {
 
         @media (max-width: 600px) {
           display: none;
+          font-size: 0.9em;
         }
       }
 
@@ -396,6 +403,7 @@ section.container-lg {
 
             @media (max-width: 600px) {
               padding-left: 0;
+              font-size: 0.9em;
             }
           }
 
@@ -435,7 +443,12 @@ section.container-lg {
           }
 
           span {
-            font-weight: bold;
+            display: none;
+
+            @media (max-width: 600px) {
+              display: inline;
+              font-weight: bold;
+            }
           }
         }
       }
