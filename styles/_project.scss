@@ -2,8 +2,13 @@
  * Project specific styling.
  */
 
-div.resultsBanner {
-  margin-top: 25px;
+.wide-body .l-article-container .resultsBanner {
+  margin-top: 60px !important;
+  margin-bottom: 0px !important;
+}
+
+.strib-styles.ssa.ssb.ssc aside.article-share {
+  margin-top: 0.5em;
 }
 
 //WIDTHS
@@ -22,20 +27,36 @@ section.container-lg {
     text-align: center;
 
     h1 {
-      padding-top: 1em;
+      padding-top: 0.5em;
       margin-bottom: 0;
-      line-height: 1.1em;
+      line-height: 0.9em;
       font-size: 4em;
+
+      @media (max-width: 768px) {
+        font-size: 3.25em;
+      }
     }
 
     h2 {
       font-size: 1.9em;
-      margin-bottom: 2em;
+      margin-bottom: 1.5em;
+
+      @media (max-width: 768px) {
+        font-size: 1.5em;
+        width: 80%;
+        margin-left: 10%;
+      }
     }
 
-    .byline address {
-      @media (max-width: 600px) {
-        color: #080808;
+    .byline {
+      address {
+        @media (max-width: 600px) {
+          color: #080808;
+        }
+      }
+
+      @media (max-width: 340px) {
+        font-size: 0.75em;
       }
     }
 
@@ -44,7 +65,7 @@ section.container-lg {
       text-align: left;
       margin: auto;
       padding-top: 30px;
-      margin-bottom: 45px;
+      margin-bottom: 100px;
 
       p {
         font-family: "Benton Sans";
@@ -74,9 +95,9 @@ section.container-lg {
     padding-bottom: 17px;
     border-bottom: 1px solid #e8e8e8;
 
-    @media (max-width: 545px) {
+    @media (max-width: 600px) {
       padding-top: 8px;
-      padding-bottom: 0;
+      padding-bottom: 10px;
     }
   }
 
@@ -93,24 +114,21 @@ section.container-lg {
     width: 100%;
     display: block;
     text-align: center;
+    margin: 0px auto;
 
-    @media (max-width: 600px) {
-      width: 70%;
-      margin: 0px auto 10px auto;
-    }
+    // @media (max-width: 600px) {
+    //   width: 70%;
+    //   margin: 0px auto 10px auto;
+    // }
 
-    @media (max-width: 385px) {
-      width: 78%;
-    }
+    // @media (max-width: 385px) {
+    //   width: 78%;
+    // }
 
     a,
     a:link,
     a:visited {
-      color: #080808;
-      -webkit-transition: color 0.3s ease-out;
-      -moz-transition: color 0.3s ease-out;
-      -o-transition: color 0.3s ease-out;
-      transition: color 0.3s ease-out;
+      color: #d3d3d3;
     }
 
     li {
@@ -119,20 +137,24 @@ section.container-lg {
       text-transform: uppercase;
       font-size: 0.75em;
       font-family: "Benton Sans";
-      border: 1px solid #080808;
+      border: 1px solid #d3d3d3;
       border-radius: 6px;
       padding: 5px 12px 4px;
       display: inline;
-      -webkit-transition: background-color 0.3s ease-out;
-      -moz-transition: background-color 0.3s ease-out;
-      -o-transition: background-color 0.3s ease-out;
-      transition: background-color 0.3s ease-out;
+      -webkit-transition: border 0.3s ease, color 0.3s ease;
+      -moz-transition: border 0.3s ease, color 0.3s ease;
+      -o-transition: border 0.3s ease, color 0.3s ease;
+      transition: border 0.3s ease, color 0.3s ease;
 
       @media (max-width: 600px) {
         display: inline-block;
         margin-top: 10px;
-        padding: 5px 12px 4px;
-        margin-right: 0.6em;
+        padding: 5px 10px 4px;
+        margin-right: 0.5em;
+
+        .navdt {
+          display: none;
+        }
       }
     }
 
@@ -140,20 +162,11 @@ section.container-lg {
       margin-right: 0;
     }
 
-    a:nth-child(2) li {
-      @media (max-width: 600px) {
-        margin-right: 0;
-      }
-    }
-
-    a:hover li {
-      cursor: pointer;
-      background-color: #f5f5f5;
-      border: 1px solid #080808;
-    }
-
+    a:hover li,
     a.active li {
-      background-color: #e8e8e8;
+      cursor: pointer;
+      color: #202020;
+      border: 1px solid #202020;
     }
   }
 
@@ -164,18 +177,31 @@ section.container-lg {
   }
 
   h2.bodyName,
-  div.office-governor h3 {
+  div#governor h3 {
     font-size: 2.75em;
     padding-top: 0;
+
+    @media (max-width: 600px) {
+      font-size: 2.25em;
+    }
   }
 
-  h2.bodyName,
-  div.office-governor {
+  h2.bodyName {
     padding-top: 150px;
     margin-bottom: 0;
 
     @media (max-width: 600px) {
       padding-top: 100px;
+      margin-bottom: 0.2em;
+    }
+  }
+
+  div.office-governor {
+    padding-top: 75px;
+    margin-bottom: 0;
+
+    @media (max-width: 600px) {
+      padding-top: 50px;
       margin-bottom: 0.2em;
     }
   }
@@ -210,11 +236,9 @@ section.container-lg {
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #eeeeee;
 
       @media (max-width: 600px) {
         flex-direction: column;
-        border-bottom: none;
       }
 
       .candidate,
@@ -264,6 +288,10 @@ section.container-lg {
         h3 {
           margin-bottom: 0.2em;
           padding-top: 0em;
+
+          @media (max-width: 600px) {
+            font-size: 1.8em;
+          }
         }
 
         .distAreas {
@@ -285,6 +313,7 @@ section.container-lg {
 
         @media (max-width: 600px) {
           order: 3;
+          margin-bottom: 1.3em;
         }
       }
 
@@ -361,7 +390,7 @@ section.container-lg {
           @media (max-width: 600px) {
             display: block;
             font-family: "Benton Sans";
-            font-size: 0.85em;
+            font-size: 0.9em;
             text-align: left;
             hyphens: auto;
           }
@@ -370,7 +399,7 @@ section.container-lg {
 
       .bios .candBio {
         font-family: "Benton Sans";
-        font-size: 0.85em;
+        font-size: 0.9em;
         text-align: justify;
         hyphens: auto;
 
@@ -405,8 +434,7 @@ section.container-lg {
             text-transform: uppercase;
             font-size: 0.8em;
             text-align: center;
-            padding-left: 0.3em;
-            padding-right: 0.3em;
+            padding: 0 0.5em;
 
             @media (max-width: 600px) {
               padding-left: 0;
@@ -436,7 +464,7 @@ section.container-lg {
 
         .response {
           width: 40%;
-          font-size: 0.85em;
+          font-size: 0.9em;
           font-family: "Benton Sans";
           margin-bottom: 0;
           text-align: justify;
@@ -458,6 +486,14 @@ section.container-lg {
             }
           }
         }
+      }
+
+      .issue:first-child {
+        border-top: 1px solid #eee;
+      }
+
+      .issue:last-child {
+        border-bottom: none;
       }
 
       .issue .response:first-child {
@@ -489,10 +525,11 @@ section.container-lg {
   }
 
   .credits {
-    margin-top: 250px;
+    margin-top: 50px;
     padding-top: 50px;
     border-top: 1px solid #666;
     font-family: "Benton Sans";
+    margin-bottom: 250px;
 
     h4 {
       text-transform: uppercase;
