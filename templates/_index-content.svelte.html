@@ -13,7 +13,7 @@
       <!-- share -->
       <div class="leadin">
         <p>It’s been decades since Minnesota saw an election year as consequential as 2018. With an open race for governor, both U.S. Senate seats on the ballot, a handful of highly competitive U.S. House races, and control of the Legislature up for grabs, the decisions made by Minnesota voters this year will echo across state and national politics for many more to come.</p>
-        <p>The Star Tribune has invited candidates to participate in its online and printed election guides, asking them to provide information about themselves and views on top issues ahead of the Nov. 6 general election. You’ll find information in this guide about the candidates for the governor’s office and other statewide executive posts, along with the candidates for U.S. Senate and House. Third party candidates are <a href="#thirdparty">listed here</a>.</p>
+        <p>The Star Tribune has invited candidates to participate in its online and printed election guides, asking them to provide information about themselves and views on top issues ahead of the Nov. 6 general election. You’ll find information in this guide about the candidates for the governor’s office and other statewide executive posts, along with the candidates for U.S. Senate and House.</p>
         <p>Minnesotans don’t have to wait until Nov. 6 to vote; <a href="http://www.startribune.com/early-voting-starts-friday/493388571/" target="_blank" rel="noopener">early voting begins on Sept. 21</a>, at which point all eligible voters may obtain an absentee ballot through the mail or in person (<a href="https://pollfinder.sos.state.mn.us/" target="_blank" rel="noopener">Find your polling place here</a>). Keep reading the Star Tribune for more coverage of campaigns and candidates right up to Election Day and continuing coverage after the votes are counted.</p>
         <p>Follow our coverage of this campaign season by signing up to the Star Tribune's <a href="http://newsletters.startribune.com/pages/1788361/4540" target="_blank" rel="noopener">daily politics newsletter</a>.</p>
       </div>
@@ -69,10 +69,10 @@
 				<div class="issue">
           <div class="issueName">
 					  <h5>{ issueName }</h5>
-            <!-- <div class="expand">
-              <button class="more">+</button>
-              <button class="less">-</button>
-            </div> -->
+            <!-- <div class="expand"> -->
+            <!-- <button class="more">+</button>
+            <button class="less">-</button> -->
+            <!-- </div> -->
           </div>
 
 					{#each responses as response}
@@ -83,13 +83,19 @@
 				</div>
 				{/each}
 			</div>
+      {#if office.thirdparty}
+        <div class="thirdparty">
+          <p><strong>Other candidates:</strong> {office.thirdparty}</p>
+        </div>
+      {/if}
 		</div>
+
 		{/each}
 
-    <div id="thirdparty">
+    <!-- <div id="thirdparty">
       <h6><strong>Third party candidates</strong></h6>
       <p><strong>Governor:</strong> Chris Wright & Judith Schwartzbacker (Grassroots - Legalize Cannabis), Josh Welter & Mary O'Connor (Libertarian); <strong>U.S. Senate - special:</strong> Sarah Wellington (Legal Marijuana Now), Jerry Trooien (unaffiliated); <strong>U.S. Senate - general:</strong> Paula Overby (Minnesota Green Party), Dennis Schuller (Legalize Marijuana Now); <strong>U.S. House District 4:</strong> Susan Pendergast Sindt (Legalize Marijuana Now); <strong>U.S. House District 8:</strong> Ray "Skip" Sandman (Independence); <strong>Secretary of State:</strong> William Denney (Independence); <strong>Auditor:</strong> Michael Ford (Legal Marijuana Now), Chris Dock (Libertarian). <strong>Attorney General:</strong> Noah M. Johnson (Grassroots - Legalize Cannabis)</p>
-    </div>
+    </div> -->
 
     <div class="credits">
       <h4>Credits</h4>
@@ -139,7 +145,8 @@
             "bodyName",
             "officeClass",
             "distMap",
-            "distAreas"
+            "distAreas",
+            "thirdparty"
           ]);
 
           o.heads = office;
