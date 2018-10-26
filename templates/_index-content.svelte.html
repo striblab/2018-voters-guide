@@ -51,6 +51,12 @@
           <h4 class="candName">{head.first} {head.last}<span class="inc">{#if head.incumbent == "y"}(i){/if}</span></h4>
           <p class="party">{head.party}</p>
           <p class="mBio">{head.bio}</p>
+          <p class="mBio addLink">
+            {#if head.ststory}
+              <a href="{head.ststory}" target="_blank" rel="noopener">Star Tribune profile</a>
+            {/if}
+            <a href="{head.website}" target="_blank" rel="noopener">Candidate website</a>
+          </p>
         </div>
         {/each}
 
@@ -60,6 +66,12 @@
         <div class="bios">
           <p class="candBio">{bio.bio}</p>
           <!--More coverage here? Link to website or our story on the person?-->
+          <p class="candBio addLink">
+            {#if bio.ststory}
+              <a href="{bio.ststory}" target="_blank" rel="noopener">Star Tribune profile</a>
+            {/if}
+            <a href="{bio.website}" target="_blank" rel="noopener">Candidate website</a>
+          </p>
         </div>
         {/each}
       </div>
